@@ -1,35 +1,34 @@
-// Dark/Light Mode Toggle
+// DARK/LIGHT MODE
 const themeBtn = document.getElementById('themeToggle');
 themeBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
     themeBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
 });
 
-// Booking Form Validation
-const form = document.getElementById('bookingForm');
-if(form){
+// BOOKING FORM VALIDATION
+const bookingForm = document.getElementById('bookingForm');
+if(bookingForm){
     const status = document.getElementById('status');
-    form.addEventListener('submit', e=>{
+    bookingForm.addEventListener('submit', e=>{
         e.preventDefault();
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim();
         const service = document.getElementById('service').value.trim();
         const date = document.getElementById('date').value;
         if(!name || !email || !service || !date){
-            status.textContent="Please fill all fields!";
-            status.style.color="red";
+            status.textContent = "Please fill all fields!";
+            status.style.color = "red";
             return;
         }
-        status.textContent="Booking successful!";
-        status.style.color="green";
-        form.reset();
+        status.textContent = "Booking successful!";
+        status.style.color = "green";
+        bookingForm.reset();
     });
 }
 
-// Simple Gallery Scroll
+// GALLERY SLIDER DRAG SCROLL
 const slider = document.querySelector('.gallery-slider');
 let isDown = false, startX, scrollLeft;
-
 if(slider){
     slider.addEventListener('mousedown', e=>{
         isDown = true;
@@ -47,3 +46,14 @@ if(slider){
         slider.scrollLeft = scrollLeft - walk;
     });
 }
+
+// SMOOTH SCROLL FOR NAV LINKS
+document.querySelectorAll('nav ul li a').forEach(anchor => {
+    anchor.addEventListener('click', function(e){
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target){
+            target.scrollIntoView({behavior:'smooth'});
+        }
+    });
+});
