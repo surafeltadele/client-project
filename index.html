@@ -3,76 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Interactive Business Website</title>
+    <link rel="stylesheet" href="style/style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <!-- Sidebar -->
-    <aside class="sidebar">
-        <h2 class="logo">MyDashboard</h2>
-        <ul class="sidebar-menu">
-            <li><a href="index.html" class="active">Dashboard</a></li>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">BizPro</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
             <li><a href="analytics.html">Analytics</a></li>
             <li><a href="profile.html">Profile</a></li>
             <li><a href="settings.html">Settings</a></li>
         </ul>
-        <button id="themeToggle">Toggle Dark/Light</button>
-    </aside>
+        <button id="themeToggle">🌙</button>
+    </nav>
 
-    <!-- Main Content -->
-    <main>
-        <header>
-            <h1>Dashboard</h1>
-            <div class="notification">🔔 You have 3 new notifications</div>
-        </header>
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1>Grow Your Business Online</h1>
+        <p>We provide modern web solutions for startups and businesses.</p>
+        <a href="#services" class="btn">Explore Services</a>
+    </section>
 
-        <!-- Stats Cards -->
-        <section class="stats">
-            <div class="card">
-                <h3>Users</h3>
-                <p id="userCount">1200</p>
-            </div>
-            <div class="card">
-                <h3>Sales</h3>
-                <p id="salesCount">$8,450</p>
-            </div>
-            <div class="card">
-                <h3>Visitors</h3>
-                <p id="visitorCount">5,230</p>
-            </div>
-        </section>
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a team of professional web developers and designers building interactive websites and dashboards.</p>
+    </section>
 
-        <!-- Recent Activity Table -->
-        <section class="table-section">
-            <h2>Recent Users</h2>
-            <table id="recentUsers">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Michael</td>
-                        <td>michael@example.com</td>
-                        <td>Active</td>
-                        <td><button>Edit</button></td>
-                    </tr>
-                    <tr>
-                        <td>Sarah</td>
-                        <td>sarah@example.com</td>
-                        <td>Inactive</td>
-                        <td><button>Edit</button></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </main>
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="card">Web Design</div>
+            <div class="card">Frontend Development</div>
+            <div class="card">Analytics & Dashboard</div>
+            <div class="card">Consulting</div>
+        </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- Features Section -->
+    <section id="features">
+        <h2>Features</h2>
+        <div class="feature-cards">
+            <div class="card">Interactive Charts</div>
+            <div class="card">Dynamic Tables</div>
+            <div class="card">Dark/Light Mode</div>
+            <div class="card">Responsive Design</div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial-cards">
+            <div class="card">"Best web developer I have ever worked with!" - Sarah</div>
+            <div class="card">"Professional dashboard for our team." - Michael</div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team">
+        <h2>Our Team</h2>
+        <div class="team-cards">
+            <div class="card">Michael - Frontend</div>
+            <div class="card">Sarah - UI/UX Designer</div>
+            <div class="card">Preast - Fullstack</div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p id="status"></p>
+    </section>
+
+    <footer>
+        <p>© 2025 BizPro | All rights reserved</p>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
