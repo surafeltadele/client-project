@@ -1,35 +1,21 @@
-// Mobile Navigation Toggle
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
+const form = document.getElementById('contactForm');
+const status = document.getElementById('status');
 
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
 
-// Form Validation
-const form = document.getElementById("contactForm");
-const message = document.getElementById("formMessage");
+    if(name === "" || email === "" || message === "") {
+        status.textContent = "Please fill in all fields.";
+        status.style.color = "red";
+        return;
+    }
 
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
+    status.textContent = "Message sent successfully!";
+    status.style.color = "green";
 
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const text = document.getElementById("message").value.trim();
-
-  if (!name || !email || !text) {
-    message.textContent = "Please fill in all fields.";
-    message.style.color = "red";
-    return;
-  }
-
-  if (!email.includes("@")) {
-    message.textContent = "Please enter a valid email address.";
-    message.style.color = "red";
-    return;
-  }
-
-  message.textContent = "Message sent successfully!";
-  message.style.color = "green";
-  form.reset();
+    form.reset();
 });
