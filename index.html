@@ -1,96 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Business Website</title>
-    <link rel="stylesheet" href="style/style.css">>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paul Barber</title>
+<link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">BizPro</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="analytics.html">Analytics</a></li>
-            <li><a href="profile.html">Profile</a></li>
-            <li><a href="settings.html">Settings</a></li>
-        </ul>
-        <button id="themeToggle">🌙</button>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <h1>Grow Your Business Online</h1>
-        <p>We provide modern web solutions for startups and businesses.</p>
-        <a href="#services" class="btn">Explore Services</a>
-    </section>
+<!-- Navbar -->
+<nav>
+    <div class="logo">Paul Barber</div>
+    <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#booking">Book</a></li>
+    </ul>
+    <button id="themeToggle">🌙</button>
+</nav>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We are a team of professional web developers and designers building interactive websites and dashboards.</p>
-    </section>
+<!-- Hero Section -->
+<section id="hero">
+    <div class="hero-content">
+        <h1>Welcome to Paul Barber</h1>
+        <p>Professional barber services for stylish cuts and grooming.</p>
+        <a href="#booking" class="btn">Book Now</a>
+    </div>
+</section>
 
-    <!-- Services Section -->
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="service-cards">
-            <div class="card">Web Design</div>
-            <div class="card">Frontend Development</div>
-            <div class="card">Analytics & Dashboard</div>
-            <div class="card">Consulting</div>
+<!-- About Section -->
+<section id="about">
+    <h2>About Us</h2>
+    <p>Paul Barber is a premium barber shop offering modern haircuts, beard grooming, and styling services. Our experienced barbers ensure a unique experience for every client.</p>
+</section>
+
+<!-- Services Section -->
+<section id="services">
+    <h2>Our Services</h2>
+    <div class="cards">
+        <div class="card">Haircut</div>
+        <div class="card">Beard Trim</div>
+        <div class="card">Shave</div>
+        <div class="card">Hair Styling</div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section id="team">
+    <h2>Meet Our Barbers</h2>
+    <div class="team-cards">
+        <div class="card">
+            <img src="images/barber1.jpg" alt="Barber 1">
+            <h3>Michael</h3>
+            <p>Senior Barber</p>
         </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features">
-        <h2>Features</h2>
-        <div class="feature-cards">
-            <div class="card">Interactive Charts</div>
-            <div class="card">Dynamic Tables</div>
-            <div class="card">Dark/Light Mode</div>
-            <div class="card">Responsive Design</div>
+        <div class="card">
+            <img src="images/barber2.jpg" alt="Barber 2">
+            <h3>Sarah</h3>
+            <p>Stylist</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials">
-        <h2>Testimonials</h2>
-        <div class="testimonial-cards">
-            <div class="card">"Best web developer I have ever worked with!" - Sarah</div>
-            <div class="card">"Professional dashboard for our team." - Michael</div>
-        </div>
-    </section>
+<!-- Gallery Section -->
+<section id="gallery">
+    <h2>Our Work</h2>
+    <div class="gallery-slider">
+        <img src="images/gallery1.jpg" alt="Gallery 1">
+        <img src="images/gallery2.jpg" alt="Gallery 2">
+        <img src="images/gallery3.jpg" alt="Gallery 3">
+    </div>
+</section>
 
-    <!-- Team Section -->
-    <section id="team">
-        <h2>Our Team</h2>
-        <div class="team-cards">
-            <div class="card">Michael - Frontend</div>
-            <div class="card">Sarah - UI/UX Designer</div>
-            <div class="card">Preast - Fullstack</div>
-        </div>
-    </section>
+<!-- Testimonials Section -->
+<section id="testimonials">
+    <h2>Testimonials</h2>
+    <div class="testimonial-cards">
+        <div class="card">"Best haircut I’ve ever had!" - John</div>
+        <div class="card">"Paul Barber is amazing!" - Mike</div>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form id="contactForm">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-            <textarea id="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-        <p id="status"></p>
-    </section>
+<!-- Booking Section -->
+<section id="booking">
+    <h2>Book an Appointment</h2>
+    <form id="bookingForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <input type="text" id="service" placeholder="Service" required>
+        <input type="date" id="date" required>
+        <button type="submit">Book Now</button>
+    </form>
+    <p id="status"></p>
+</section>
 
-    <footer>
-        <p>© 2025 BizPro | All rights reserved</p>
-    </footer>
+<!-- Footer -->
+<footer>
+    <p>© 2025 Paul Barber | All rights reserved</p>
+</footer>
 
-    <script src="js/script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
