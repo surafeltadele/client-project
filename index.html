@@ -3,53 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Landing Page</title>
+    <title>Interactive Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">MyBusiness</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2 class="logo">MyDashboard</h2>
+        <ul class="sidebar-menu">
+            <li><a href="index.html" class="active">Dashboard</a></li>
+            <li><a href="analytics.html">Analytics</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="settings.html">Settings</a></li>
         </ul>
-    </nav>
+        <button id="themeToggle">Toggle Dark/Light</button>
+    </aside>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <h1>Grow Your Business Online</h1>
-        <p>We help businesses succeed with modern web solutions.</p>
-        <a href="#contact" class="cta-btn">Contact Us</a>
-    </section>
+    <!-- Main Content -->
+    <main>
+        <header>
+            <h1>Dashboard</h1>
+            <div class="notification">🔔 You have 3 new notifications</div>
+        </header>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-        <div class="service-cards">
-            <div class="card">Web Design</div>
-            <div class="card">SEO Optimization</div>
-            <div class="card">Social Media Marketing</div>
-        </div>
-    </section>
+        <!-- Stats Cards -->
+        <section class="stats">
+            <div class="card">
+                <h3>Users</h3>
+                <p id="userCount">1200</p>
+            </div>
+            <div class="card">
+                <h3>Sales</h3>
+                <p id="salesCount">$8,450</p>
+            </div>
+            <div class="card">
+                <h3>Visitors</h3>
+                <p id="visitorCount">5,230</p>
+            </div>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <form id="contactForm">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-            <textarea id="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-        <p id="status"></p>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 MyBusiness | Follow us on social media</p>
-    </footer>
+        <!-- Recent Activity Table -->
+        <section class="table-section">
+            <h2>Recent Users</h2>
+            <table id="recentUsers">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Michael</td>
+                        <td>michael@example.com</td>
+                        <td>Active</td>
+                        <td><button>Edit</button></td>
+                    </tr>
+                    <tr>
+                        <td>Sarah</td>
+                        <td>sarah@example.com</td>
+                        <td>Inactive</td>
+                        <td><button>Edit</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
